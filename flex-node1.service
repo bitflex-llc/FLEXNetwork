@@ -1,0 +1,10 @@
+[Unit]
+Description=Flex Network Node 1
+
+[Service]
+ExecStart=geth --datadir /raid/node1 --syncmode 'full' --port 30311 --networkid 100892 --miner.gasprice 1 --allow-insecure-unlock -unlock fb4004ed3ca9bc0b49d63dd288fe8a1c7d79a16b --password /raid/pwd.txt --mine --miner.etherbase 0xfb4004ed3ca9bc0b49d63dd288fe8a1c7d79a16b
+WorkingDirectory=/raid/node1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
