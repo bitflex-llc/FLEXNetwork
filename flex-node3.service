@@ -3,7 +3,7 @@ Description=Flex Network Node 1
 
 [Service]
 ExecStart=geth --datadir /raid/node3 --syncmode 'full' --port 30313 --networkid 100892 --authrpc.port 8553 --gcmode=archive  --ws.api "admin,eth,net,web3,txpool,clique,rpc,network,debug" --ws --ws.port 8546 --ws.origins "*" --http  --http.corsdomain "*" --http.api "admin,eth,net,web3,txpool,clique,rpc,debug,shh" --http.vhosts "*"
-WorkingDirectory=/raid/node2
+WorkingDirectory=/raid/node3
 Restart=always
 
 [Install]
